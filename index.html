@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Quiz Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Quiz de Informática</h1>
+
+    <div id="inicio">
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome">
+      <button id="btnIniciar" disabled>Iniciar Quiz</button>
+    </div>
+
+    <div id="quiz" hidden>
+      <section>
+        <h2>Redes</h2>
+        <p>Qual camada do modelo OSI é responsável pelo roteamento de pacotes?</p>
+        <ul>
+          <li class="alternativa">1) Física</li>
+          <li class="alternativa">2) Enlace</li>
+          <li class="alternativa" data-correta>3) Rede</li>
+          <li class="alternativa">4) Transporte</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Linguagem C</h2>
+        <p>Qual função é usada para imprimir texto na tela em C?</p>
+        <ul>
+          <li class="alternativa">1) scanf()</li>
+          <li class="alternativa" data-correta>2) printf()</li>
+          <li class="alternativa">3) cout</li>
+          <li class="alternativa">4) print()</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Sistemas Operacionais</h2>
+        <p>O que é um processo em um sistema operacional?</p>
+        <ul>
+          <li class="alternativa" data-correta>1) Um programa em execução</li>
+          <li class="alternativa">2) Um arquivo salvo no disco</li>
+          <li class="alternativa">3) Um tipo de memória</li>
+          <li class="alternativa">4) Um driver de dispositivo</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Banco de Dados</h2>
+        <p>Qual comando SQL é usado para consultar dados de uma tabela?</p>
+        <ul>
+          <li class="alternativa">1) INSERT</li>
+          <li class="alternativa">2) UPDATE</li>
+          <li class="alternativa" data-correta>3) SELECT</li>
+          <li class="alternativa">4) DELETE</li>
+        </ul>
+      </section>
+
+      <button id="btnProximo" disabled>Próxima</button>
+      <small>Dica: teclas 1–4 escolhem a resposta, Enter avança.</small>
+    </div>
+
+    <div id="placar" hidden></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
